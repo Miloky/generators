@@ -1,0 +1,13 @@
+{
+  "name": "generator-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "webpack",
+    "webpack-package"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^4.0.1"
+  }
+}
