@@ -29,7 +29,13 @@ module.exports = class extends Generator {
         '@babel/core',
         '@babel/preset-env',
         'typescript',
-        'ts-loader'
+        'ts-loader',
+        'mini-css-extract-plugin',
+
+        'style-loader',
+        'sass-loader',
+        'node-sass',
+        'css-loader'
       ],
       {
         'save-dev': true
