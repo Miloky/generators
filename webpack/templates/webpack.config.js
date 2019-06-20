@@ -38,7 +38,8 @@ module.exports = {
           {
             loader: "postcss-loader?sourceMap",
             options: {
-              sourceMap: "source-map"
+              sourceMap: "source-map",
+              plugins: [require('autoprefixer')]
             }
           }
         ]
@@ -61,12 +62,15 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js", "scss"]
   },
   plugins: [
     new WebpackBar(),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'index.css'
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "src/index.html",
