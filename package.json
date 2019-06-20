@@ -4,7 +4,9 @@
   "description": "",
   "files": [
     "webpack",
-    "webpack-package"
+    "webpack-package",
+    "eslint",
+    "prettier"
   ],
   "license": "ISC",
   "dependencies": {
