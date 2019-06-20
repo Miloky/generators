@@ -1,10 +1,10 @@
-const Generator = require('yeoman-generator');
+const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installWebpackNpmDependencies() {
     let isPkgJsonExist;
     try {
-      isPkgJsonExist = this.fs.exists('package.json');
+      isPkgJsonExist = this.fs.exists("package.json");
     } catch (e) {
       isPkgJsonExist = false;
       console.log(e);
@@ -19,26 +19,28 @@ module.exports = class extends Generator {
 
     this.npmInstall(
       [
-        'webpack',
-        'webpack-cli',
-        'webpack-dev-server',
-        'webpackbar',
-        'clean-webpack-plugin',
-        'html-webpack-plugin',
-        'babel-loader',
-        '@babel/core',
-        '@babel/preset-env',
-        'typescript',
-        'ts-loader',
-        'mini-css-extract-plugin',
+        "autoprefixer",
+        "webpack",
+        "webpack-cli",
+        "webpack-dev-server",
+        "webpackbar",
+        "clean-webpack-plugin",
+        "html-webpack-plugin",
+        "babel-loader",
+        "@babel/core",
+        "@babel/preset-env",
+        "typescript",
+        "ts-loader",
+        "mini-css-extract-plugin",
 
-        'style-loader',
-        'sass-loader',
-        'node-sass',
-        'css-loader'
+        "style-loader",
+        "sass-loader",
+        "node-sass",
+        "css-loader",
+        "postcss-loader"
       ],
       {
-        'save-dev': true
+        "save-dev": true
       }
     );
   }
